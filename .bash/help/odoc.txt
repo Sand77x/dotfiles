@@ -1,0 +1,43 @@
+Usage: odoc <mode> <arg> [optional: <additional_arg>]
+
+Available modes:
+
+1. **a** <filename>
+   - Create a new document with the name <filename>.md.
+   - Example: `odoc a newdoc` creates `newdoc.md`.
+
+2. **l**
+   - List all documents in the $HOME/Documents/docs directory.
+   - Example: `odoc l` shows all files.
+
+3. **rn** <filename> <new_name>
+   - Rename an existing document <filename>.md to <new_name>.md.
+   - Example: `odoc rn olddoc newdoc` renames `olddoc.md` to `newdoc.md`.
+
+4. **s** <filename> [line_count]
+   - Display the content of a document <filename>.md.
+   - Optionally, limit output to the first [line_count] lines.
+   - If no document is provided, display contents of `.scratch.md`.
+   - Example: `odoc s mydoc 10` shows the first 10 lines of `mydoc.md`.
+   - Example: `odoc s mydoc` shows the entire content of `mydoc.md`.
+   - Example: `odoc s` shows the entire content of `.scratch.md`.
+
+5. **gr** <filename> <expression> [line_count]
+   - Grep the content of a document <filename>.md.
+   - Optionally, limit trailing lines to the first [line_count] lines.
+   - Example: `odoc gr mydoc Header 5` greps `mydoc.md` for 'Header' with 5 trailing lines.
+   - Example: `odoc gr mydoc Header` greps `mydoc.md` for 'Header' with 10 trailing lines.
+
+6. **e** <filename>
+   - Edit a document <filename>.md using the default editor (`nvim`).
+   - If the document doesn't exist, it will be created.
+   - If no document is provided, a `.scratch.md` file will be opened.
+   - Example: `odoc e mydoc` opens `mydoc.md` for editing.
+   - Example: `odoc e` opens `.scratch..md` for editing.
+
+7. **d** <filename>
+   - Delete a document <filename>.md.
+   - This will prompt for confirmation before deletion.
+   - Example: `odoc d mydoc` deletes `mydoc.md`.
+
+Credits: ChatGPT (boo ai!!)
