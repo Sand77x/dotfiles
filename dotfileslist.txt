@@ -3,6 +3,7 @@ bashrc           | ~/.bashrc
 bash_profile     | ~/.bash_profile
 bash_logout      | ~/.bash_logout
 bash scripts     | ~/.bash
+gitconfig        | ~/.gitconfig
 glazewm          | ~/.glzr/glazewm/config.yaml
 zebar            | ~/.glzr/zebar/custom
 clickan          | ~/.clikan.yaml
