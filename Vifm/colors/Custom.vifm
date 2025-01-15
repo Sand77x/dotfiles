@@ -12,7 +12,7 @@ hi TabLine      cterm=none                    ctermfg=white    ctermbg=black
 hi TabLineSel   cterm=bold                    ctermfg=white    ctermbg=black
 
 hi JobLine      cterm=bold                    ctermfg=white    ctermbg=238
-hi StatusLine   cterm=none                    ctermfg=black    ctermbg=182
+hi StatusLine   cterm=none                    ctermfg=blue    ctermbg=default
 hi Border       cterm=none                    ctermfg=white    ctermbg=none
 
 hi CurrLine     cterm=bold,reverse            ctermfg=default  ctermbg=default

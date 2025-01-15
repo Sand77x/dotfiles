@@ -20,12 +20,12 @@ return function(config)
             },
             attachment = "Fixed",
             hsb = {
-                brightness = 0.05,
-                saturation = 0.8
+                brightness = 0.04,
+                saturation = 0.8,
             },
             width = "Cover",
             vertical_align = "Middle",
             horizontal_align = "Center",
-        }
+        },
     }
 end

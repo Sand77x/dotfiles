@@ -81,14 +81,13 @@ set grepprg='rg --line-number %i %a %s'
 delbmarks!
 bmark! C:/mingwlibs/            mingwlibs 
 bmark! C:/Program\ Files/       progfiles 
-bmark! ~/AppData/Roaming/Vifm/  vifm
-bmark! ~/AppData/Local/nvim/    nvim
 bmark! ~/AppData/               appdata
 bmark! ~/scoop/                 scoop 
 bmark! ~/Downloads/             downloads 
 bmark! ~/Documents/             documents
 bmark! ~/Documents/projects/    projects
 bmark! ~/Onedrive/schoolfolder/ schoolfolder
+bmark! ~/.dotfiles/             dotfiles
 
 
 " ------------------------------------------------------------------------------
