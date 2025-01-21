@@ -1,4 +1,4 @@
-vim.opt.shell   = "cmd"
+vim.opt.shell   = "bash"
 vim.g.mapleader = " "
 vim.opt.iskeyword:remove("_")
 

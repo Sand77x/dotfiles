@@ -164,7 +164,7 @@ fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
 
 " default program for these filetypes
-filetype {*.png,*.jpg,*.pdf,*.docs,*.pptx,*.docx,*.mp4,*.mp3,*.mkv} explorer %f &
+filetype {*.png,*.jpg,*.jpeg,*.webp,*.jfif,*.pdf,*.docs,*.pptx,*.docx,*.mp4,*.mp3,*.mkv} explorer %f &
 
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings

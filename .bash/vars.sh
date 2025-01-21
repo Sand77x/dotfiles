@@ -12,3 +12,5 @@ alias date='date +%R\ on\ %a,\ %m-%d-%y'
 alias ll='ls -h -l -X'
 
 alias clik='clikan'
+
+source ~/.bash/exports.sh

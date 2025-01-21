@@ -3,6 +3,7 @@ Vifm/Trash
 Vifm/vifm-help.txt
 Vifm/vifminfo.json
 .bash/assets
+.bash/exports.sh
 .glzr/glazewm/errors.log
 .glzr/zebar/starter
 .glzr/zebar/Makefile

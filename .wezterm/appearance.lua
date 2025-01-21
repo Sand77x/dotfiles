@@ -11,7 +11,7 @@ return function(config)
     config.freetype_load_flags = 'NO_HINTING'
     config.force_reverse_video_cursor = true
 
-    config.max_fps = 120
+    config.max_fps = 240
 
     config.background = {
         {
