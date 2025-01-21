@@ -18,24 +18,6 @@ cds () {
     cd "$SCHOOL/$1"
 }
 
-# get password from list
-pass() {
-    local PASSWORDS=~/.bash/assets/passwords.json
-    if [ -z "$1" ]; then
-        echo "Expecting 1 argument from list:" && echo ""
-        jq -r "keys[]" "$PASSWORDS"
-        return
-    fi
-
-    local val=$(jq -r '."'$1'".[] | "\(.key): \(.val)"' "$PASSWORDS" 2>/dev/null)
-    if [ -z "$val" ]; then
-        echo Invalid key.
-        return
-    fi
-
-    echo "$val"
-}
-
 # launch zoom based on list
 zoom() {
     local ZOOM_LINKS=~/.bash/assets/zoom_links.json
