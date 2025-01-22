@@ -16,7 +16,7 @@ set shell="C:/Program\ Files/Git/bin/bash.exe"
 
 " Trash Directory
 set trash
-" set trashdir
+" set trashdir=C:/Trash
 
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
             \phistory,fhistory,dirstack,registers,bookmarks,bmarks
@@ -81,6 +81,7 @@ set grepprg='rg --line-number %i %a %s'
 delbmarks!
 bmark! C:/mingwlibs/            mingwlibs 
 bmark! C:/Program\ Files/       progfiles 
+bmark! C:/.vifm-Trash/          trash
 bmark! ~/AppData/               appdata
 bmark! ~/scoop/                 scoop 
 bmark! ~/Downloads/             downloads 

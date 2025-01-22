@@ -11,21 +11,5 @@ return function(config)
     config.freetype_load_flags = 'NO_HINTING'
     config.force_reverse_video_cursor = true
 
-    config.max_fps = 240
-
-    config.background = {
-        {
-            source = {
-                File = require "wezterm".config_dir .. "\\backgrounds\\aesthetic.jpg"
-            },
-            attachment = "Fixed",
-            hsb = {
-                brightness = 0.04,
-                saturation = 0.8,
-            },
-            width = "Cover",
-            vertical_align = "Middle",
-            horizontal_align = "Center",
-        },
-    }
+    config.max_fps = 120
 end
