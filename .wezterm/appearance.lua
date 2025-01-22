@@ -12,4 +12,24 @@ return function(config)
     config.force_reverse_video_cursor = true
 
     config.max_fps = 120
+
+    config.background = {
+        {
+            source = {
+                File = require("wezterm").config_dir .. "\\backgrounds\\shinobuflipped.jpg",
+            },
+            attachment = "Fixed",
+            width = "Cover",
+            vertical_align = "Middle",
+            horizontal_align = "Right",
+        },
+        {
+            source = {
+                Color = "black"
+            },
+            width = "100%",
+            height = "100%",
+            opacity = 0.8,
+        },
+    }
 end

@@ -1,11 +1,5 @@
 return function(_)
     local w = require("wezterm")
-    local backgrounds = {
-        w.config_dir .. "\\backgrounds\\shinobuflipped.jpg",
-        w.config_dir .. "\\backgrounds\\aesthetic.jpg",
-        w.config_dir .. "\\backgrounds\\redsun.jpg",
-        w.config_dir .. "\\backgrounds\\ocean.png",
-    }
 
     local padding = {
         left = '1cell',
@@ -30,31 +24,5 @@ return function(_)
             end
             window:set_config_overrides(overrides)
         end
-    end)
-
-    -- cycle through backgrounds when making new windows
-    w.on('window-config-reloaded', function(window, _)
-        local overrides = window:get_config_overrides() or {}
-        overrides.background = {
-            {
-                source = {
-                    File = backgrounds[window:window_id() % #backgrounds + 1]
-                },
-                attachment = "Fixed",
-                width = "Cover",
-                vertical_align = "Middle",
-                horizontal_align = "Right",
-            },
-            {
-                source = {
-                    Color = "black"
-                },
-                width = "100%",
-                height = "100%",
-                opacity = 0.8,
-            },
-        }
-
-        window:set_config_overrides(overrides)
     end)
 end
