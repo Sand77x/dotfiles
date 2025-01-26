@@ -18,7 +18,6 @@ require("lazy").setup({
         { "nvim-tree/nvim-web-devicons" },
         -- lsp stuff
         { "williamboman/mason.nvim" },
-        { "rafamadriz/friendly-snippets" },
         { "mfussenegger/nvim-jdtls" },
         { "leafOfTree/vim-svelte-plugin" },
         -- plpugins with actual configuration

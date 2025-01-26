@@ -2,6 +2,10 @@ return {
     "saghen/blink.cmp",
     version = "*",
     build = "cargo build --release",
+    dependencies = {
+        { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+        "rafamadriz/friendly-snippets"
+    },
 
     opts = {
         keymap = {
@@ -24,6 +28,10 @@ return {
             },
             menu = {
                 auto_show = false,
+                draw = {
+                    treesitter = { 'lsp' },
+                    columns = { { 'kind_icon' }, { 'label', 'label_description', 'source_name', gap = 1 } },
+                }
             },
             ghost_text = {
                 enabled = false,
@@ -64,23 +72,15 @@ return {
         },
 
         sources = {
-            default = { "lsp", "path", "snippets", "buffer" },
+            default = { "lsp", "path", "snippets", "buffer", "lazydev" },
             providers = {
 
                 snippets = {
-                    name = 'Snippets',
-                    module = 'blink.cmp.sources.snippets',
-
                     opts = {
                         friendly_snippets = true,
-                        global_snippets = { 'all' },
                         extended_filetypes = {
                             ["javascript"] = { "javascriptreact" }
                         },
-                        ignored_filetypes = {},
-                        get_filetype = function(_)
-                            return vim.bo.filetype
-                        end,
                     },
                 },
 

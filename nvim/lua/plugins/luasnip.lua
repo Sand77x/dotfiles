@@ -1,20 +1,17 @@
 return {
     "L3MON4D3/LuaSnip",
-    enabled = false,
+    event = "LspAttach",
     version = "v2.*",
     build = "make install_jsregexp",
-    config = function()
+    dependencies = { "rafamadriz/friendly-snippets" },
+    init = function()
         require("luasnip.loaders.from_vscode").lazy_load()
 
-        local ls = require("luasnip")
-
-        ls.config.set_config({
-            updateevents = "TextChanged, TextChangedI",
-            enable_autosnippets = true,
-        })
+        -- local ls = require("luasnip")
 
         -- extensions for better snippets
-        ls.filetype_extend("javascript", { "javascriptreact" })
-        ls.filetype_extend("javascript", { "html" })
+        -- ls.filetype_extend("javascript", { "javascriptreact" })
+        -- ls.filetype_extend("javascript", { "html" })
     end,
+
 }
