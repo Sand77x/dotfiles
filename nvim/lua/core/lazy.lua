@@ -24,7 +24,6 @@ require("lazy").setup({
         -- plpugins with actual configuration
         { import = "plugins" },
         -- helpful for dev stuff
-        { "mattn/emmet-vim" },
         { "tpope/vim-commentary" },
         { "wellle/targets.vim" },
         -- fun stuff

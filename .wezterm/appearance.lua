@@ -10,6 +10,7 @@ return function(config)
     config.freetype_render_target = "HorizontalLcd"
     config.freetype_load_flags = 'NO_HINTING'
     config.force_reverse_video_cursor = true
+    config.front_end = "OpenGL"
 
     config.max_fps = 120
 

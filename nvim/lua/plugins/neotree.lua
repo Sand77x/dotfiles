@@ -20,6 +20,8 @@ return {
 							["-"] = "navigate_up",
 							["."] = "set_root",
 							["l"] = "open",
+                            ["<C-f>"] = "filter_on_submit",
+                            ["<C-x>"] = "clear_filter",
 							["<Esc>"] = "close_window",
 							["<leader>pv"] = "close_window",
 						},

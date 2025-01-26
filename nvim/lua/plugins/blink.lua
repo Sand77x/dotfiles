@@ -1,11 +1,8 @@
 return {
     "saghen/blink.cmp",
-    dependencies = "rafamadriz/friendly-snippets",
     version = "*",
     build = "cargo build --release",
 
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
     opts = {
         keymap = {
             ["<C-n>"] = { "show", "hide" },
@@ -20,13 +17,16 @@ return {
 
         completion = {
             list = {
-                selection = "preselect",
+                selection = {
+                    preselect = true,
+                    auto_insert = false
+                }
             },
             menu = {
                 auto_show = false,
             },
             ghost_text = {
-            	enabled = false,
+                enabled = false,
             },
             documentation = {
                 auto_show = true,
@@ -49,7 +49,6 @@ return {
         },
 
         fuzzy = {
-            use_typo_resistance = true,
             use_frecency = true,
             use_proximity = true,
         },
@@ -57,49 +56,34 @@ return {
         -- REALLY COOL, but until it has a way to be only enabled on keymap,
         -- i dont really want to use it
         signature = {
-        	enabled = false,
+            enabled = false,
         },
 
-        appearance = {
-            use_nvim_cmp_as_default = true,
-            nerd_font_variant = "mono",
-            kind_icons = {
-                Text = "󰉿",
-                Method = "󰊕",
-                Function = "󰊕",
-                Constructor = "󰒓",
-
-                Field = "󰜢",
-                Variable = "󰆦",
-                Property = "󰖷",
-
-                Class = "󱡠",
-                Interface = "󱡠",
-                Struct = "󱡠",
-                Module = "󰅩",
-
-                Unit = "󰪚",
-                Value = "󰦨",
-                Enum = "󰦨",
-                EnumMember = "󰦨",
-
-                Keyword = "󰻾",
-                Constant = "󰏿",
-
-                Snippet = "󱄽",
-                Color = "󰏘",
-                File = "󰈔",
-                Reference = "󰬲",
-                Folder = "󰉋",
-                Event = "󱐋",
-                Operator = "󰪚",
-                TypeParameter = "󰬛",
-            },
+        snippets = {
+            preset = "default",
         },
 
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
             providers = {
+
+                snippets = {
+                    name = 'Snippets',
+                    module = 'blink.cmp.sources.snippets',
+
+                    opts = {
+                        friendly_snippets = true,
+                        global_snippets = { 'all' },
+                        extended_filetypes = {
+                            ["javascript"] = { "javascriptreact" }
+                        },
+                        ignored_filetypes = {},
+                        get_filetype = function(_)
+                            return vim.bo.filetype
+                        end,
+                    },
+                },
+
                 lazydev = {
                     name = "LazyDev",
                     module = "lazydev.integrations.blink",
@@ -109,5 +93,6 @@ return {
             },
         },
     },
+
     opts_extend = { "sources.default" },
 }
