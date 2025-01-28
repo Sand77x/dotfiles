@@ -3,6 +3,7 @@ return {
 	config = function()
 		require("scrollbar").setup({
 			excluded_filetypes = {
+                "snipe-menu",
 				"nofile",
 				"neo-tree",
 				"neo-tree filesystem",
