@@ -4,8 +4,12 @@
  */
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
+:root {
+    --green: #7fa18f;
+}
+
 i {
-    color: yellow;
+    color: var(--green);
     /* color: rgb(115 130 175 / 95%); */
     margin-right: 7px;
 }
@@ -89,19 +93,19 @@ body,
     color: rgb(255 255 255 / 100%);
     border: none;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 4px;
 
     &:not(.displayed) {
         opacity: 0.8;
     }
 
     &.displayed {
-        background: rgb(255 255 255 / 15%);
+        background: rgb(255 255 255 / 5%);
     }
 
     &.focused,
     &:hover {
-        outline: 1px solid yellow;
+        outline: 1px solid var(--green);
         /* background: rgb(75 115 255 / 50%); */
     }
 }
@@ -109,12 +113,11 @@ body,
 .binding-mode,
 .tiling-direction {
     background: rgb(255 255 255 / 15%);
-    color: yellow;
+    color: var(--green);
     border-radius: 2px;
     line-height: 1;
     padding: 4px 8px;
     border: 0;
-    cursor: pointer;
 }
 
 .binding-mode {

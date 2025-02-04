@@ -49,7 +49,7 @@ window_effects:
     border:
       enabled: true
       # color: '#ffbe89'
-      color: '#729bdb'
+      color: '#7fa18f'
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -100,25 +100,25 @@ window_behavior:
 
 workspaces:
   - name: '1'
-    display_name: "🚀"
-    keep_alive: true
+    display_name: "⚪ browser"
   - name: '2'
-    display_name: "🚬"
-    keep_alive: true
+    display_name: "🔵 work"
   - name: '3'
-    display_name: "</>"
-    keep_alive: true
+    display_name: "🟢 terminal"
   - name: '4'
+    display_name: "🟤 four"
   - name: '5'
+    display_name: "🟤 five"
   - name: '6'
+    display_name: "🟤 six"
   - name: '7'
+    display_name: "🟤 seven"
   - name: '8'
+    display_name: "🟤 eight"
   - name: '9'
-    display_name: "💬"
-    keep_alive: true
+    display_name: "🟡 messaging"
   - name: '0'
-    display_name: "😎"
-    keep_alive: true
+    display_name: "🟣 misc"
 
 window_rules:
   - commands: ['move --workspace 1']
@@ -257,7 +257,7 @@ keybindings:
 
   # Close focused window.
   - commands: ['close']
-    bindings: ['alt+x']
+    bindings: ['alt+w']
 
   # Kill GlazeWM process safely.
   - commands: ['wm-exit']
