@@ -8,6 +8,7 @@ return {
     { "gmr458/cold.nvim" },
     { "lunarvim/Onedarker.nvim" },
     { "sam4llis/nvim-tundra" },
+    { "sainnhe/everforest" },
     {
         "olivercederborg/poimandres.nvim",
         config = function()

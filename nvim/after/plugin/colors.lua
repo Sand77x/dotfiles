@@ -1,7 +1,7 @@
 function ColorMyPencils(color)
-    color = color or "melange"
+    color = color or "everforest"
     -- custom color config
-    vim.g.melange_enable_font_variants = false
+    -- vim.g.melange_enable_font_variants = false
     --
     vim.cmd.colorscheme(color)
 end

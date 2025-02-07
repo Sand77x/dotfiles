@@ -1,5 +1,5 @@
 return function(config)
-    config.color_scheme = 'hardhacker'
+    config.color_scheme = 'OceanicNext (base16)'
     config.window_background_opacity = 1.0
     config.line_height = 1.2
     config.cell_width = 0.9
