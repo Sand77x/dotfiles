@@ -36,7 +36,7 @@
         glazewm: { type: 'glazewm' },
         cpu: { type: 'cpu' },
         time: { type: 'date', formatting: "HH:mm" },
-        date: { type: 'date', formatting: "EEE, MM-dd-yyyy" },
+        date: { type: 'date', formatting: "EEE, MMM dd - yyyy" },
         battery: { type: 'battery' },
         memory: { type: 'memory' },
         weather: { type: 'weather' },
@@ -150,26 +150,6 @@
             <div className="center"><span className="time">{output.time?.formatted}</span> <span className="date">{output.date?.formatted}</span></div>
 
             <div className="right">
-              {output.glazewm && (
-                <>
-                  {output.glazewm.bindingModes.map(bindingMode => (
-                    <button
-                      className="binding-mode"
-                      key={bindingMode.name}
-                    >
-                      {bindingMode.displayName ?? bindingMode.name}
-                    </button>
-                  ))}
-
-                  <button
-                    className={`tiling-direction nf ${output.glazewm.tilingDirection === 'horizontal' ? 'nf-md-swap_horizontal' : 'nf-md-swap_vertical'}`}
-                    onClick={() =>
-                      output.glazewm.runCommand('toggle-tiling-direction')
-                    }
-                  ></button>
-                </>
-              )}
-
               {output.network && (
                 <div className="network">
                   {getNetworkIcon(output.network)}
