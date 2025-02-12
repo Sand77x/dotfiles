@@ -123,7 +123,7 @@ workspaces:
 window_rules:
   - commands: ['move --workspace 1']
     match:
-      - window_process: { regex: 'chrome|msedge|firefox' }
+      - window_process: { regex: 'chrome|msedge|firefox|brave' }
 
   - commands: ['move --workspace 3']
     match:
