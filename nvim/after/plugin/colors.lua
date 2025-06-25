@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-    color = color or "everforest"
+    color = color or "lunaperche"
     -- custom color config
     -- vim.g.melange_enable_font_variants = false
     --
@@ -13,7 +13,7 @@ ColorMyPencils()
 -- vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
 
 -- basic
-vim.api.nvim_set_hl(0, "CursorLine", { bg = "None" })
+-- vim.api.nvim_set_hl(0, "CursorLine", { bg = "None" })
 
 -- git
 vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#5fd75f" })

@@ -1,4 +1,7 @@
-vim.opt.shell   = "bash"
+vim.o.shell = 'C:\\Users\\sand77x\\scoop\\apps\\msys2\\current\\usr\\bin\\bash.exe'
+vim.o.shellcmdflag = '-c'
+vim.o.shellquote = ""
+vim.o.shellxquote = ""
 vim.g.mapleader = " "
 vim.opt.iskeyword:remove("_")
 

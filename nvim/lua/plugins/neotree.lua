@@ -22,7 +22,7 @@ return {
 							["l"] = "open",
                             ["<C-f>"] = "filter_on_submit",
                             ["<C-x>"] = "clear_filter",
-							["<Esc>"] = "close_window",
+							["<C-c>"] = "close_window",
 							["<leader>pv"] = "close_window",
 						},
 					},

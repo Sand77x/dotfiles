@@ -142,7 +142,7 @@ window_rules:
 
   - commands: ['toggle-floating --centered']
     match:
-      - window_process: { regex: 'SnippingTool|Taskmgr|explorer|Photos' }
+      - window_process: { regex: 'SnippingTool|Taskmgr|explorer|FPilot|Photos' }
       - window_title: { regex: 'Zoom Workplace|Media Player' }
 
   - commands: ['toggle-tiling']

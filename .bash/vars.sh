@@ -13,3 +13,7 @@ alias cl="clear && "
 alias ll='ls -h -l -X'
 
 alias clik='clikan'
+alias wat='node ~/Documents/projects/watracker/index.js'
+alias fp='fpilot'
+
+alias vk='NVIM_APPNAME="nvim-kickstart" nvim'
