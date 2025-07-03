@@ -10,33 +10,6 @@ clickan          | ~/.clikan.yaml
 scoop            | (cmd) `scoop export` to get json / (cmd) `scoop import` <json> to import
 rainlendar       | (app) file - export - iCalendar Format / (app) file - import - iCalendar Format
 wezterm          | ~/.wezterm.lua and ~/.wezterm
-vifm             | ~/AppData/Roaming/Vifm/vifmrc and ~/AppData/Roaming/Vifm/colors/Custom.vifm
-
-// apps
-Steam
-Epic Games Launcher
-Spotify
-Messenger
-Discord
-Chrome (sand77x profile)
-Glazewm
-Obsidian
-Wezterm
-Rainlendar
-Windows PowerToys
-Photoshop | ~/Documents/Adobe Photoshop CC 2019
-
-// binaries
-gcc        | (pacman) mingw-w64-i686-gcc
-gcc        | (pacman) mingw-w64-ucrt-x86_64-gcc
-pkg-config | (pacman) mingw-w64-i686-pkgconf
-pkg-config | (pacman) mingw-w64-ucrt-x86_64-pkgconf
-clikan     | (pip) clikan
-jq         | (extra-commands) jq
-git bash
-node
-scoop
-python
 
 // documents
 dshmc ds3 driver  | ~/documents/dshidmini_v2.2.282.0
