@@ -1,0 +1,16 @@
+gui:
+  scrollHeight: 8
+notARepository: quit
+keybinding:
+  universal:
+    nextTab: l
+    prevTab: h
+    nextItem-alt: j
+    prevItem-alt: k
+    prevBlock-alt: <c-k>
+    nextBlock-alt: <c-j>
+    scrollUpMain-alt1: <disabled>
+    scrollDownMain-alt1: <disabled>
+  commits:
+    moveDownCommit: J
+    moveUpCommit: K
