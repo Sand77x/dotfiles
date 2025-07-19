@@ -114,10 +114,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- $0% remaps
-vim.keymap.set('n', 'H', '^')
-vim.keymap.set('n', 'L', '$')
-vim.keymap.set('n', 'Q', '%')
+-- QOL motion remaps
+vim.keymap.set({ 'n', 'v' }, 'H', '^')
+vim.keymap.set({ 'n', 'v' }, 'L', '$')
+vim.keymap.set({ 'n', 'v' }, 'Q', '%')
 
 -- Macro remap (I keep clicking it!!)
 vim.keymap.set('n', 'q', '<nop>')

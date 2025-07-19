@@ -102,9 +102,9 @@ workspaces:
   - name: '1'
     display_name: "⚪ browser"
   - name: '2'
-    display_name: "🔵 work"
+    display_name: "🔵 extra"
   - name: '3'
-    display_name: "🟢 terminal"
+    display_name: "🟢 code"
   - name: '4'
     display_name: "🟤 four"
   - name: '5'

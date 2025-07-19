@@ -98,8 +98,6 @@ alias wat='node ~/Documents/projects/watracker/index.js'
 alias fp='fpilot'
 alias lg='lazygit'
 
-alias vk='NVIM_APPNAME="nvim-kickstart" nvim'
-
 # ================== COMMANDS ====================
 
 # resource bashrc
@@ -130,7 +128,7 @@ zoom() {
 sched() {
     local txt=~/.bash/assets/sched.txt
     local day=$1
-    
+
     if [ -z $day ]; then
         cat "$txt"
         return
@@ -324,4 +322,4 @@ tunt() {
 }
 
 source ~/.bash/bash_fzf.sh
-source ~/.bash/bash_prompt_str.sh
+# source ~/.bash/bash_prompt_str.sh

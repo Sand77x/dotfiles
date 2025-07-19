@@ -47,7 +47,6 @@ gs_git_show_branch_and_hash_no_formatting() {
     # See my comment: 
     # https://stackoverflow.com/questions/15715825/how-do-you-get-the-git-repositorys-name-in-some-git-repository#comment137449876_15716016
     git_repo="$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")"
-
     git_branch="$(command git symbolic-ref -q --short HEAD 2>/dev/null)"
     # See: https://stackoverflow.com/a/16925062/4561887
     if [ "$(command git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ] && [ -z "$git_branch" ]; then
@@ -145,6 +144,7 @@ elif [[ "$OSTYPE" == "msys" ]]; then
     #   look just like the terminal prompt on Linux! 
     # PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]\[\033[0m\]$ '
     # PS1='`gs_git_show_branch_and_hash`'"$PS1"
+    # PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w \[\033[36m\]`gs_git_show_branch_and_hash` \[\033[0m\]\n$ '
     PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w \[\033[36m\]`gs_git_show_branch_and_hash` \[\033[0m\]\n$ '
 fi
 #
