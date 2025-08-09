@@ -32,14 +32,14 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '0px'
+  inner_gap: '8px'
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '40px'
-    right: '0px'
-    bottom: '0x'
-    left: '0px'
+    top: '48px'
+    bottom: '6px'
+    right: '10px'
+    left: '10px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -49,7 +49,8 @@ window_effects:
     border:
       enabled: true
       # color: '#ffbe89'
-      color: '#7fa18f'
+      # color: '#ef1a41'
+      color: '#9e3ef2'
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -61,18 +62,18 @@ window_effects:
     corner_style:
       enabled: true
       # Allowed values: 'square', 'rounded', 'small_rounded'.
-      style: 'square'
+      style: 'rounded'
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: '#a1a1a1'
+      color: '#5fc18f'
     hide_title_bar:
       enabled: false
     corner_style:
       enabled: true
-      style: 'square'
+      style: 'rounded'
 
 window_behavior:
   # New windows are created in this state whenever possible.

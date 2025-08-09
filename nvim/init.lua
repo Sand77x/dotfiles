@@ -1,6 +1,6 @@
-vim.o.shell = 'cmd'
-vim.o.shellquote = ''
-vim.o.shellxquote = ''
+vim.o.shell = 'bash'
+vim.o.shellcmdflag = '-c'
+vim.o.shellxquote = '""'
 vim.o.shellslash = true
 
 vim.g.mapleader = ' '
@@ -21,9 +21,14 @@ vim.schedule(function()
     vim.o.clipboard = 'unnamedplus'
 end)
 
+vim.schedule(function()
+    require('mache').setup()
+end)
+
 vim.o.breakindent = true
 
 vim.o.wrap = false
+vim.o.linebreak = true
 
 vim.o.undofile = true
 
@@ -102,10 +107,6 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- Move lines in visual mode
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
-
--- Better 0 remap
-vim.keymap.set('n', '0', '^')
-vim.keymap.set('n', '^', '0')
 
 -- zz remaps
 vim.keymap.set('n', 'J', 'mzJ`z')
@@ -258,6 +259,7 @@ require('lazy').setup(
                     defaults = {
                         mappings = {
                             i = {
+                                ['<C-x>'] = require('telescope.actions').delete_buffer,
                                 ['<C-k>'] = require('telescope.actions').move_selection_previous,
                                 ['<C-j>'] = require('telescope.actions').move_selection_next,
                             },
@@ -680,6 +682,12 @@ require('lazy').setup(
                 --         comments = { italic = false }, -- Disable italics in comments
                 --     },
                 -- }
+                require('rose-pine').setup {
+                    variant = 'main',
+                    styles = {
+                        italic = false,
+                    },
+                }
 
                 vim.cmd.colorscheme 'rose-pine'
             end,

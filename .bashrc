@@ -1,4 +1,15 @@
-# from https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles/blob/master/etc/skel/.bashrc
+# from https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles/blob/master/etc/sjel/.bashrc
+
+source ~/.bash/.bash_git
+
+get_git_branch() {
+    local branch
+    branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
+
+    echo " $branch"
+}
+
+PS1='\[\e[38;5;46;1m\]\W\[\e[0;93m\]$(get_git_branch)\[\e[0m\] \$ '
 
 # If not running interactively, don't do anything
 case $- in
@@ -320,6 +331,3 @@ tunt() {
         echo "$past$(($time_between / 3600))h $(($time_between % 3600 / 60))m $(($time_between % 60))s"
     fi
 }
-
-source ~/.bash/bash_fzf.sh
-# source ~/.bash/bash_prompt_str.sh
